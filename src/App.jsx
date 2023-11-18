@@ -1,13 +1,13 @@
 import Cabecalho from "./components/Cabecalho"
 import Rodape from "./components/Rodape"
-import Solucao from "./components/Solucao"
+import { Outlet } from "react-router-dom"
 
 function App() {
 
   return (
     <>
       <Cabecalho/>
-      <Solucao/>
+        <Outlet/>
       <Rodape/>
     </>
   )

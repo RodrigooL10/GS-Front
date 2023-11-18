@@ -1,0 +1,55 @@
+/* styles.css */
+
+.formLogin {
+    width: 700px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  
+  #LoginTitulo {
+    text-align: center;
+    color: #333;
+  }
+  
+  .formCom {
+    margin-top: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    margin-left: 10px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border-radius: 20px;
+  }
+  
+  #entrar {
+    background-color: black;
+    border: 3px solid #1c77ff;
+    border-radius: 15px;
+    color: #1c77ff;
+    cursor: pointer;
+  }
+  
+  #entrar:hover {
+    background-color: #1c77ff;
+    border: 2px solid black;
+    color: black;  }
+  
+  p {
+    text-align: center;
+    margin-top: 10px;
+    color: #888;
+  }
+  

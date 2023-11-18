@@ -1,5 +1,6 @@
 import React from "react"
 import { Navbar, Nav } from 'react-bootstrap';
+import { Link } from "react-router-dom";
 import "./Cabecalho.scss"
 
 
@@ -11,9 +12,9 @@ export default function Cabecalho(){
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mx-auto ml-5">
-                    <Nav.Link href="#home" className="fs-5">Início</Nav.Link>
-                    <Nav.Link href="#link" className="fs-5">Login</Nav.Link>
-                    <Nav.Link href="#contact" className="fs-5">Solução</Nav.Link>
+                    <Nav.Link className="fs-5"><Link to='/' className="whiteLink">Início</Link></Nav.Link>
+                    <Nav.Link className="fs-5"><Link to='/login' className="whiteLink">Login</Link></Nav.Link>
+                    {/* <Nav.Link href="#contact" className="fs-5">Solução</Nav.Link> */}
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>                

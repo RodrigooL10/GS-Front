@@ -1,0 +1,69 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: 200px;
+    text-align: center;
+    width: 100%;
+    gap: 5px;
+    grid-template-areas: 
+        "main       main        main        main        main        main        main            aside1       aside1     aside1  aside1  aside1"
+        "main       main        main        main        main        main        main            aside1       aside1     aside1  aside1  aside1"
+        "main       main        main        main        main        main        main            aside2       aside2     aside2  aside2  aside2"
+        "article1   article1    article2    article2    article2    article2    article2        aside2       aside2     aside2  aside2  aside2"
+        "article1   article1    article2    article2    article2    article2    article2        aside3       aside3     aside3  aside3  aside3"
+        "article1   article1    article2    article2    article2    article2    article2        aside3       aside3     aside3  aside3  aside3"
+        ;
+    margin-top:5%;
+    margin-bottom: 15%;
+
+
+    main{
+        grid-area: main;
+        background-color: aquamarine;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .aside1{
+        grid-area: aside1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: bisque;
+
+    }
+
+    .aside2{
+        grid-area: aside2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: blueviolet;
+    }
+
+    .aside3{
+        grid-area: aside3;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: chocolate;
+    }
+
+    .article1{
+        grid-area: article1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        background-color: darkblue;
+    }
+
+    .article2{
+        grid-area: article2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: chartreuse;
+    }
+}

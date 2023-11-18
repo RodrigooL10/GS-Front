@@ -1,12 +1,29 @@
 div{
 
     .bg-custom{
-        background-color: rgb(4, 55, 131);
+        background-color: #043783;
     }
 
     p{
         text-align: right;
         margin-right: 3rem;
+    }
+
+    .fs-5{
+        font-family: Arial, Helvetica, sans-serif;
+
+        .whiteLink{
+            color: white;
+            text-decoration: none;
+
+            &:hover{
+                color: black;
+            }
+        }
+
+        &:hover{
+            background-color: white;
+        }
     }
 }
 
