@@ -1,9 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import {AiFillEdit as Editar} from "react-icons/ai"
 import {AiFillDelete as Excluir} from "react-icons/ai"
-import '../routes/css/Administrador/Administrador.scss'
-import { format } from "date-fns";
+import "./Adm.scss"
 
 export default function Adm() {
   document.title = "Lista de Usuários";
@@ -38,6 +36,7 @@ export default function Adm() {
               <th>NOME</th>
               <th>EMAIL</th>
               <th>DATA DE NASCIMENTO</th>
+              <th>GÊNERO</th>
               <th>EXCLUIR</th>
             </tr>
           </thead>
@@ -57,7 +56,7 @@ export default function Adm() {
           </tbody>
           <tfoot>
             <tr>
-              <td colSpan={5}>USUÁRIOS CADASTRADOS - QTD = {ListaUsuariosLocal.length}</td>
+              <td colSpan={6}>USUÁRIOS CADASTRADOS - QTD = {ListaUsuariosLocal.length}</td>
             </tr>
           </tfoot>
         </table>

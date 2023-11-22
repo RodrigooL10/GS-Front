@@ -1,12 +1,12 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "nome": "Eric Rodrigues",
-      "email": "ericgameplay@email.com",
+      "id": 2,
+      "nome": "Rod",
+      "email": "rod@gmail.com",
       "senha": "1234",
-      "dataNasc": "2023-09-24",
-      "gender": "other"
+      "dataNasc": "2023-10-31",
+      "gender": "male"
     }
   ]
 }

@@ -9,13 +9,19 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
 import Cadastro from './components/Cadastro.jsx';
+import Adm from './components/Adm.jsx';
+import Erro404 from './components/Erro404.jsx';
+import ExcluirUsuarios from './components/Excluir.jsx';
 
 const router = createBrowserRouter([
-  {path: "/", element: <App/>, 
+  {path: "/", element: <App/>, errorElement: <Erro404/>, 
    children:[
-    {path:"/", element:<Home/>},
-    {path:"/login", element:<Login/>},
-    {path:"/cadastro", element:<Cadastro/>}
+    {path:"/", element:<Login/>},
+    {path:"/home", element:<Home/>},
+    {path:"/cadastro", element:<Cadastro/>},
+    {path:"/adm", element:<Adm/>},
+    {path:"/excluir/usuarios/:id", element:<ExcluirUsuarios/>},
+
   ]}
 ]);
 

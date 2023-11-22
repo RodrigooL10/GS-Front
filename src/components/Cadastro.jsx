@@ -56,7 +56,7 @@ const handleSubmit = (e) => {
             if (response.status === 201) {
                 alert("Usuário cadastrado com sucesso!");
                 // Redirect
-                navigate("/login");
+                navigate("/");
               } else {
                 alert("Erro ao cadastrar usuário");
                 navigate('/cadastro');
@@ -126,7 +126,7 @@ const handleSubmit = (e) => {
             <option value="other">Outro</option>
           </select><br /><br />
           <input id="cadastrar" type="submit" value="Cadastrar" />
-          <p id="jaTem">Já possui uma conta? <Link id="links" to="/Login">CLIQUE AQUI</Link></p>
+          <p id="jaTem">Já possui uma conta? <Link id="links" to="/">CLIQUE AQUI</Link></p>
         </form>
       </div>
     )

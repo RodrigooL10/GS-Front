@@ -1,13 +1,13 @@
 import "./Login.scss"
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Login(){
 
     const [msgstatus, setMsgstatus] = useState("");
     const [classStatus, setClassStatus] = useState("");
     
-
+    const navigate = useNavigate()
   //Vai receber os dados do FORMULÁRIO!!!
   //É um OBJETO!!!
   const [usuario, setUsuario] = useState({
@@ -53,6 +53,11 @@ export default function Login(){
         // console.log(users);
         for (let x = 0; x < users.length; x++) {
           const u = users[x];
+        
+        if (usuario.email === "admin" && usuario.senha === "123456") {
+            navigate('/adm');
+            return
+        }
 
           //Realizando a validação de fato;
           if (u.email == usuario.email && u.senha == usuario.senha) {
@@ -61,6 +66,8 @@ export default function Login(){
           }
         }
         if (user) {
+            
+           // Se o login for "adm" e a senha "12345", redirecione para a página desejada
 
           //Redirecionando o usuário para HOME!
           setMsgstatus("Login realizado com SUCESSO!!");
@@ -78,7 +85,7 @@ export default function Login(){
           sessionStorage.setItem("user-obj", JSON.stringify(user));
 
           setTimeout(()=>{
-              window.location = "/";
+              navigate("/home");
             },5000);
           
         } else {
@@ -95,7 +102,7 @@ export default function Login(){
                 senha: "",
               });
 
-              window.location = "/login";
+              window.location = "/";
             },5000);
           
         }
@@ -105,7 +112,7 @@ export default function Login(){
           email: "",
           senha: "",
         });
-        window.location = "/login";
+        window.location = "/";
       }
     } catch (error) {
       console.log(error);
@@ -122,7 +129,7 @@ export default function Login(){
             <form className="formCom" onSubmit={handleSubmit}>
                 <label htmlFor="idEmail">Email:</label>
                 <input 
-                    type="email" 
+                    type="text" 
                     name="email" 
                     id="idEmail" 
                     value={usuario.email} 
