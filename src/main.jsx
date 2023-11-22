@@ -8,12 +8,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Home from './components/Home.jsx';
 import Login from './components/Login.jsx';
+import Cadastro from './components/Cadastro.jsx';
 
 const router = createBrowserRouter([
   {path: "/", element: <App/>, 
    children:[
     {path:"/", element:<Home/>},
-    {path:"/login", element:<Login/>}
+    {path:"/login", element:<Login/>},
+    {path:"/cadastro", element:<Cadastro/>}
   ]}
 ]);
 
