@@ -1,7 +1,5 @@
-import React from "react"
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar,  } from 'react-bootstrap';
 import Image from 'react-bootstrap/Image';
-import { Link } from "react-router-dom";
 import "./Cabecalho.scss"
 
 
@@ -15,7 +13,7 @@ export default function Cabecalho(){
                     style={{height:"60px", marginRight:"5px", marginLeft:"5px"}}
                     roundedCircle
                     />
-                    Dream-Watch</Navbar.Brand>
+                    DreamWatch</Navbar.Brand>
             </Navbar>                
             <p>Global Solution 2023 - Engenharia de Software - FIAP</p>
         </div>

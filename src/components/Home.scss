@@ -52,6 +52,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: 16px;
       h3 {
         color: #000000;
@@ -69,17 +70,17 @@
   
     .aside1 {
       grid-area: aside1;
-      background-color: bisque;
+      background-color: rgb(130, 240, 255);
     }
   
     .aside2 {
       grid-area: aside2;
-      background-color: blueviolet;
+      background-color: rgb(17, 202, 226);
     }
   
     .aside3 {
       grid-area: aside3;
-      background-color: chocolate;
+      background-color: rgb(68, 158, 211);
     }
   
     .article1 {
@@ -96,10 +97,10 @@
   
     .article2 {
       grid-area: article2;
-      background-color: chartreuse;
+      background-color: rgb(23, 122, 236)
     }
   
-    @media screen and (max-width: 768px) {
+    @media (max-width: 768px) {
       .container {
         grid-template-areas:
           "main main main main main main main main main main main main"
@@ -109,7 +110,7 @@
           "article1 article1 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2"
           "article1 article1 article2 article2 article2 article2 article2 article2 article2 article2 article2 article2";
       }
-
+  
       .aside1,
       .aside2,
       .aside3,
@@ -127,22 +128,22 @@
           color: #000000;
         }
       }
-
+  
       main {
         grid-area: main;
         display: flex;
         align-items: center;
         justify-content: center;
   
-        .Imgdreamwatch{
-          height: 607px;
-          width: 404px;
+        .Imgdreamwatch {
+          max-width: 100%;  
+          height: 607px;     
           margin-right: 5px;
           margin-left: 5px;
           border: 5px solid black;
         }
       }
-
+  
       .article1{
         .logo{
             margin-top: 170px;
@@ -160,3 +161,277 @@
     }
   }
   
+  @media (max-width: 1024px) {
+    .container{
+      main{
+        .Imgdreamwatch{
+          width: 544px;
+        }
+      }
+    }
+  }
+
+
+  @media (max-width: 700px) {
+    .nomeUsuario {
+      margin-top: 5%;
+      .logoutIcon{
+        top: 165px;
+      }
+    }
+  
+    .container {
+      margin-top: 30%; // Ajuste conforme necessário
+      grid-template-areas:
+        "main"
+        "article1"
+        "aside1"
+        "aside2"
+        "aside3"
+        "article2";
+      grid-template-columns: 1fr;
+  
+      main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .Imgdreamwatch {
+          width: 100%;
+          height: 350px; // Defina uma altura adequada ou remova essa propriedade
+        }
+      }
+  
+      .aside1 {
+        margin-top: 0%; // Ajuste conforme necessário
+
+        h3{
+          margin-top: 7px;
+          font-size: 20px;
+        }
+        p{
+          font-size: 11.5px;
+        }
+      }
+  
+      .article1 {
+        margin-top: 20%; // Ajuste conforme necessário
+        
+        .logo {
+          margin-bottom: 45%; // Ajuste conforme necessário
+          height: 100px; // Defina uma altura adequada ou remova essa propriedade
+        }
+      }
+      
+      .aside2{
+        h3{
+          margin-top: 7px;
+          font-size: 20px;
+        }
+        p{
+          font-size: 11.5px;
+        }
+      }
+      .aside3{
+        h3{
+          margin-top: 7px;
+          font-size: 20px;
+        }
+        p{
+          font-size: 11.5px;
+        }
+      }
+
+      .article2{
+        h3{
+          margin-top: 7px;
+          font-size: 20px;
+        }
+        p{
+          font-size: 11.5px;
+        }
+      }
+      
+  
+    }
+  }
+
+  @media (max-width: 390px) {
+    .nomeUsuario {
+      .logoutIcon {
+        top: 125px;
+      }
+    }
+
+    .container{
+
+      .article1{
+        margin-top: 22%;
+
+        .logo{
+          margin-bottom: 50%;
+        }
+      }
+
+      .aside1 {
+        margin-top: 0%; // Ajuste conforme necessário
+        
+        h3{
+          margin-top: 5px;
+          font-size: 19px;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+      
+      .aside2{
+        h3{
+          margin-top: 5px;
+          font-size: 19px;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+      .aside3{
+        h3{
+          margin-top: 5px;
+          font-size: 19px;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+      
+      .article2{
+        h3{
+          margin-top: 5px;
+          font-size: 19px;
+        }
+        p{
+          font-size: 11px;
+        }
+      }
+    }
+  }
+    
+  @media (max-width: 320px) {
+    .nomeUsuario {
+      .logoutIcon {
+        top: 150px;
+      }
+    }
+
+    .container{
+
+      .article1{
+        margin-top: 17%;
+
+        .logo{
+          margin-bottom: 60%;
+        }
+      }
+
+      .aside1 {
+        margin-top: 0%; // Ajuste conforme necessário
+        
+        h3{
+          margin-top: 1px;
+          font-size: 15px;
+        }
+        p{
+          font-size: 10px;
+        }
+      }
+      
+      .aside2{
+        h3{
+          margin-top: 1px;
+          font-size: 15px;
+        }
+        p{
+          font-size: 10px;
+        }
+      }
+      .aside3{
+        h3{
+          margin-top: 1px;
+          font-size: 15px;
+        }
+        p{
+          font-size: 10px;
+        }
+      }
+      
+      .article2{
+        h3{
+          margin-top: 1px;
+          font-size: 15px;
+        }
+        p{
+          font-size: 10px;
+        }
+      }
+    }
+  }  
+
+  @media (max-width:280px){
+    .nomeUsuario{
+      .logoutIcon{
+        margin-left: -22px;
+      }
+    }
+
+    .container{
+
+      .article1{
+        margin-top: 17%;
+
+        .logo{
+          margin-bottom: 60%;
+        }
+      }
+
+      .aside1 {
+        margin-top: 0%; // Ajuste conforme necessário
+        
+        h3{
+          margin-top: 1px;
+          font-size: 14px;
+        }
+        p{
+          font-size: 9px;
+        }
+      }
+      
+      .aside2{
+        h3{
+          margin-top: 1px;
+          font-size: 14px;
+        }
+        p{
+          font-size: 9px;
+        }
+      }
+      .aside3{
+        h3{
+          margin-top: 1px;
+          font-size: 14px;
+        }
+        p{
+          font-size: 9px;
+        }
+      }
+      
+      .article2{
+        h3{
+          margin-top: 1px;
+          font-size: 14px;
+        }
+        p{
+          font-size: 9px;
+        }
+      }
+    }
+  }

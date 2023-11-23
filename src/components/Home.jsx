@@ -1,9 +1,8 @@
-import React from "react";
 import "./Home.scss";
 import Image from 'react-bootstrap/Image';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { CiLogout as Logout } from "react-icons/ci";
+import { IoMdAlert as Alert} from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function Home() {
@@ -23,7 +22,12 @@ export default function Home() {
     if (!isUserAuthenticated) {
         // Se o usuário não estiver autenticado, redireciona para a página de login
         return (
-            <h5 className="text-center mt-5 mb-5">Você não fez o Login, volte e efetue o Login <Link id="links" to="/">CLIQUE AQUI</Link></h5>
+            <div className="d-flex row">
+            <Alert
+                className="text-center ms-0 fs-1 text-danger"
+            />
+            <h5 className="text-center mt-3 mb-5">Você não fez o Login, volte e efetue o Login <Link id="links" to="/">CLIQUE AQUI</Link></h5>
+            </div>
         ); // Evita a renderização do restante do componente
     }
 
@@ -80,44 +84,43 @@ export default function Home() {
         </div>
             
             <div className="row mb-5">
+
+                <h2>Recomendações para uma melhor noite de sono:</h2>
+
                 <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mx-auto">
                     <Card className="mx-auto" style={{ width: '18rem' }}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Img variant="top" src="./img1.jpg" />
                     <Card.Body>
-                        <Card.Title>Card Title</Card.Title>
-                        <Card.Text>
-                        Some quick example text to build on the card title and make up the
-                        bulk of the card's content.
+                        <Card.Title>Crie um Ritual Noturno</Card.Title>
+                        <Card.Text className="mx-auto text-center" >
+                        Estabeleça uma rotina relaxante antes de dormir, como ler um livro ou praticar a meditação.
                         </Card.Text>
-                        <Button variant="primary">Go somewhere</Button>
                     </Card.Body>
                     </Card>
                 </div>
 
                 <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mx-auto">
                 <Card className="mx-auto" style={{ width: '18rem' }}>
-                <Card.Img variant="top" src="holder.js/100px180" />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                <Card.Img variant="top" src="./img2.jpg" />
+                <Card.Body >
+                    <Card.Title>Ambiente Confortável</Card.Title>
+                    <Card.Text className="mx-auto text-center">
+                    Mantenha o quarto escuro, silencioso e fresco para promover um sono tranquilo.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    
                 </Card.Body>
                 </Card>
                 </div>
 
                 <div className="col-lg-4 col-md-6 col-sm-12 mb-3 mx-auto">
                 <Card style={{ width: '18rem' }} className="mx-auto">
-                <Card.Img variant="top" src="holder.js/100px180" />
+                <Card.Img variant="top" src="./img3.jpg" />
                 <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    bulk of the card's content.
+                    <Card.Title>Limite Eletrônicos</Card.Title>
+                    <Card.Text className="mx-auto text-center">
+                    Desconecte-se de dispositivos eletrônicos pelo menos 30 minutos antes de dormir para melhorar a qualidade do sono.
                     </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
+                    
                 </Card.Body>
                 </Card>
                 </div>
