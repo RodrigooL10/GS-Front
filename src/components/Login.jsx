@@ -29,9 +29,11 @@ export default function Login(){
 
         if(msgstatus == "Login realizado com SUCESSO!!"){
             setClassStatus("login-sucesso");
-        }else if(msgstatus == "Usuário e ou Senha incorretos!"){
+        }
+        else if(msgstatus == "Usuário e ou Senha incorretos!"){
           setClassStatus("login-erro");
-        }else{
+        }
+        else{
           setClassStatus("login");
         }
 

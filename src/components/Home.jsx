@@ -1,33 +1,54 @@
 import React from "react";
-import "./Home.scss"
+import "./Home.scss";
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { CiLogout as Logout} from "react-icons/ci";
+import { CiLogout as Logout } from "react-icons/ci";
+import { Link, useNavigate } from "react-router-dom";
 
+export default function Home() {
+    const navigate = useNavigate();
 
+    // Função de logout
+    function logout() {
+        // Limpa todo o sessionStorage ao efetuar o logout
+        sessionStorage.clear();
+        // Redireciona para a tela de login
+        navigate("/");
+    }
 
-export default function Home(){
+    // Verifica se o usuário está autenticado
+    const isUserAuthenticated = sessionStorage.getItem("token-user") !== null;
 
-    const userObj = JSON.parse(sessionStorage.getItem("user-obj"))
-    let nomeUsuario = "Convidado"
+    if (!isUserAuthenticated) {
+        // Se o usuário não estiver autenticado, redireciona para a página de login
+        return (
+            <h5 className="text-center mt-5 mb-5">Você não fez o Login, volte e efetue o Login <Link id="links" to="/">CLIQUE AQUI</Link></h5>
+        ); // Evita a renderização do restante do componente
+    }
+
+    const userObj = JSON.parse(sessionStorage.getItem("user-obj"));
+    let nomeUsuario = "Convidado";
 
     if (userObj) {
-        nomeUsuario = userObj.nome        
-        console.log(`Nome do usuário: ${nomeUsuario}`)
+        nomeUsuario = userObj.nome;
+        console.log(`Nome do usuário: ${nomeUsuario}`);
+    } else {
+        console.log("Objeto do usuário não encontrado no sessionStorage");
     }
-    else{
-        console.log("Objeto do usuário não encontrado no sessionStorage")
-    }
+
 
     return(
         <div className="nomeUsuario">
-            <Logout/>
+            <Logout 
+                onClick={logout}
+                className="logoutIcon"
+            />
             <h2>Bem-vindo, {nomeUsuario}!</h2>
         <div className="container">
             <main>
             <Image  src='/dreamwatch.jpg'
-                    style={{height:"607px", width: "752px", marginRight:"5px", marginLeft:"5px", border:"5px solid black"}}
+                    className="Imgdreamwatch"
                     />
             </main>
             <aside className="aside1">
@@ -47,7 +68,7 @@ export default function Home(){
             </aside>
             <article className="article1">
             <Image  src='/logo.png'
-                    style={{height:"250px", marginRight:"5px", marginLeft:"5px"}}
+                    className="logo"
                     roundedCircle
                     />
             </article>

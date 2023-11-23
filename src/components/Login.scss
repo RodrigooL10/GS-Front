@@ -55,25 +55,25 @@ p {
   }
 }
 
-.login-message {
-  display: block;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 2px;
-  border: 2px solid;
-
-  &.login-sucesso {
-      background-color: #63d463;
-      color: #214821;
-      border-color: #214821;
+.login-sucesso {
+    display: block;
+    background-color: #63d463;
+    color: #214821;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #214821;
   }
 
-  &.login-erro {
-      background-color: #d96666;
-      color: #b82121;
-      border-color: #b82121;
+.login-erro {
+    display: block;
+    background-color: #d96666;
+    color: #b82121;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2px;
+    border: 2px solid #b82121;
   }
-}
 
 // Media queries para tornar o layout mais responsivo
 @media (max-width: 768px) {
