@@ -3,6 +3,8 @@ import "./Home.scss"
 import Image from 'react-bootstrap/Image';
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { CiLogout as Logout} from "react-icons/ci";
+
 
 
 export default function Home(){
@@ -20,6 +22,7 @@ export default function Home(){
 
     return(
         <div className="nomeUsuario">
+            <Logout/>
             <h2>Bem-vindo, {nomeUsuario}!</h2>
         <div className="container">
             <main>

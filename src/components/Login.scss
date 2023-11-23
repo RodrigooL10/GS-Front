@@ -1,80 +1,96 @@
-/* styles.css */
-
 .formLogin {
-    width: 700px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f0f0f0;
-    border-radius: 8px;
-    margin-top: 10%;
-    margin-bottom: 10%;
-  }
-  
-  #LoginTitulo {
-    text-align: center;
-    color: #333;
-  }
-  
-  .formCom {
-    margin-top: 20px;
-  }
-  
-  label {
-    display: block;
-    margin-bottom: 8px;
-    color: #555;
-    margin-left: 10px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    
-  }
-  
-  #entrar {
-    background-color: black;
-    border: 3px solid #1c77ff;
-    border-radius: 15px;
-    color: #1c77ff;
-    cursor: pointer;
-  }
-  
-  #entrar:hover {
-    background-color: #043783;
-    border: 2px solid black;
-    color: white;  }
-  
-  p {
-    text-align: center;
-    margin-top: 10px;
-    color: #888;
-
-    #links{
-      text-decoration: none;
-      color: #1c77ff;
-    }
-  }
-
-  .login-sucesso{
-    display: block;
-    background-color: #63d463;
-    color: #214821;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 2px;
-    border: 2px solid #214821;
+  max-width: 700px;
+  margin: 10% auto;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
 
-.login-erro{
-    display: block;
-    background-color: #d96666;
-    color: #b82121;
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 2px;
-    border: 2px solid #b82121;
+#LoginTitulo {
+  text-align: center;
+  color: #333;
+}
+
+.formCom {
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  margin-left: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+  border-radius: 20px;
+}
+
+#entrar {
+  background-color: black;
+  border: 3px solid #1c77ff;
+  border-radius: 15px;
+  color: #1c77ff;
+  cursor: pointer;
+}
+
+#entrar:hover {
+  background-color: #043783;
+  border: 2px solid black;
+  color: white;
+}
+
+p {
+  text-align: center;
+  margin-top: 10px;
+  color: #888;
+
+  a {
+      text-decoration: none;
+      color: #1c77ff;
+  }
+}
+
+.login-message {
+  display: block;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2px;
+  border: 2px solid;
+
+  &.login-sucesso {
+      background-color: #63d463;
+      color: #214821;
+      border-color: #214821;
+  }
+
+  &.login-erro {
+      background-color: #d96666;
+      color: #b82121;
+      border-color: #b82121;
+  }
+}
+
+// Media queries para tornar o layout mais responsivo
+@media (max-width: 768px) {
+  .formLogin {
+      width: 90%;
+      margin-top: 15%;
+      margin-bottom: 10%;
+  }
+
+  input {
+      border-radius: 10px;
+  }
+}
+
+@media (max-width: 425px) {
+  .formLogin {
+      margin-top: 25%;
+      margin-bottom: 41%;
+  }
 }

@@ -7,6 +7,14 @@
       "senha": "1234",
       "dataNasc": "2023-10-31",
       "gender": "male"
+    },
+    {
+      "id": 3,
+      "nome": "Eric Rodrigues",
+      "email": "eric@gmail.com",
+      "senha": "1234",
+      "dataNasc": "2023-11-08",
+      "gender": "female"
     }
   ]
 }

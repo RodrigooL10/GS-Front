@@ -1,11 +1,18 @@
-div{
-
-    .bg-custom{
+div {
+    .bg-custom {
         background-color: #043783;
     }
 
-    p{
+    p {
         text-align: right;
         margin-right: 3rem;
+    }
+
+    // Media query para ajustar o layout em telas menores
+    @media (max-width: 425px) {
+        p {
+            text-align: center;
+            margin: 0; // Remova a margem direita em telas menores
+        }
     }
 }
